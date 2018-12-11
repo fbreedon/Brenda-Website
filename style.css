@@ -1,0 +1,99 @@
+/* CSS DIRECTORY
+  1. = GLOBAL
+  2. = HOMEPAGE
+
+*/
+
+/* COLORS
+
+*/
+
+/* === GLOBAL === */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial";
+  margin: 0;
+}
+
+header {
+  
+}
+
+nav {
+}
+
+footer {
+  
+}
+
+h1 {
+
+}
+
+p {
+  
+}
+
+/* === HOMEPAGE === */
+
+.homepage-header {
+	position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 64px;
+}
+
+.homepage-navigation {
+	position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homepage-navigation a {
+	text-decoration: none;
+	color: #000000;
+	padding: 0 16px;
+}
+
+.homepage-footer {
+  position: absolute;
+  bottom: 0;
+  padding: 0 0 0 32px;
+}
+
+/* === SIDEBAR === */
+
+.sidebar-navigation {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar-navigation a {
+	display: block;
+	text-decoration: none;
+	color : #000000;
+	padding: 16px 0;
+}
+
+.sidebar-navigation a:hover {
+	color: #808080;
+}
+
+.sidebar-navigation a.active {
+
+}
+
+.sub-sidebar {
+	padding: 16px 0;
+}
