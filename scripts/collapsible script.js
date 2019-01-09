@@ -1,4 +1,5 @@
 var collapse = document.getElementsByClassName("collapsible");
+var viewport = window.innerWidth;
 var i;
 
 // For each element with the collapsible class, listen for one to be
@@ -8,17 +9,20 @@ for (i = 0; i < collapse.length; i++) {
   	collapse[i].addEventListener("click", function() {
   		// Set the element to be active or inactive
     	this.classList.toggle("active");
-    	// Get the element's next sibling, which is the paragraph text
+    	// Get the element's next sibling, which are the sub-sidebar sections
     	var content = this.nextElementSibling;
-    	// If the text is already displayed, hide it
+    	// If the links are already displayed, hide them
     	if (content.style.maxHeight) {
     	  	content.style.maxHeight = null;
-    	// Otherwise, show the text
+    	// Otherwise, show the links
     	} else {
       		content.style.maxHeight = content.scrollHeight + "px";
     	}
   	});
 }
 
-// Get the collapsible with the default id and click it so it's open by default
-document.getElementById("default").click();
+// Check that the viewport is not mobile
+if (viewport >= 800) {
+  // Get the collapsible with the default id and click it so it's open by default
+  document.getElementById("default").click();
+}

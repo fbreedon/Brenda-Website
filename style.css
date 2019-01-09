@@ -1,7 +1,12 @@
 /* CSS DIRECTORY
   1. = GLOBAL
   2. = HOMEPAGE
-
+  3. = SIDEBAR
+  4. = GALLERY
+  5. = MOBILE
+  6. = ICON CLOSED
+  7. = ICON OPEN
+  8. = MOBILE GALLERY
 */
 
 /* COLORS
@@ -83,15 +88,21 @@ p {
 .sidebar-container {
 	margin: 0;
 	padding: 48px 24px;
-  width: 380px;
+  width: 400px;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
 .sidebar-container .title {
-  font-size: 1.8em;
+  font-size: 2em;
   letter-spacing: 3px;
+}
+
+.sidebar-container .nav-icon {
+	display: none;
+	font-size: 1.9em;
+	color: black;
 }
 
 .sidebar-navigation {
@@ -126,24 +137,54 @@ p {
 /* === GALLERY === */
 
 .content-container {
-	margin: 0 0 0 380px;
+	margin: 0 0 0 400px;
 	height: 100%;
 	display: inline-block;
 }
 
 /* === MOBILE ===*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+
+	/* === ICON CLOSED === */
+
 	.sidebar-container {
+	  padding: 24px 24px;
 		width: 100%;
 		min-width: 200px;
 		height: auto;
 		position: relative;
 	}
 
+	.sidebar-container a.nav-icon {
+		float: right;
+		display: block;
+	}
+
+	.sidebar-navigation {
+		padding: 0;
+	}
+
 	.sidebar-navigation a {
 		text-align: center;
+		display: none;
 	}
+
+	.sub-sidebar {
+		font-size: 0.8em;
+	}
+
+	/* === ICON OPEN === */
+
+	.responsive {
+		padding: 16px 0 0 0;
+	}
+
+	.responsive a {
+		display: block;
+	}
+
+	/* === MOBILE GALLERY === */
 
 	.content-container {
 		margin: 0;

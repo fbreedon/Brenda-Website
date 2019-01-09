@@ -4,6 +4,7 @@
   <head>
   	<meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   	<meta name="description" content="">
     <meta name="keywords" content="">
@@ -26,7 +27,13 @@
     <!-- Navigation sidebar container -->
     <div class="sidebar-container">
       <a href="./" class="title">Brenda Louie</a>
-      <nav class="sidebar-navigation">
+      <!-- Responsive icon for mobile -->
+      <a href="javascript:void(0);" class="nav-icon" onclick="clickIcon()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+      <!-- Navigation sidebar links -->
+      <nav class="sidebar-navigation" id="navigation-id">
 
         <!-- Painting sidebar collapsible -->
         <a class="collapsible" id="default">Painting</a>
@@ -56,12 +63,19 @@
           <a href="./mixed-white_wedding.html">White Wedding</a>
         </section>
 
-        <!-- Non-art navigation links -->
-        <a href="./about.html">About</a>
-        <a href="./news.html">News</a>
+        <!-- About sidebar collapsible -->
+        <a class="collapsible">About</a>
+        <section class="sub-sidebar">
+          <a href="./about-biography.html">Biography</a>
+          <a href="./about-resume.html">Resume</a>
+          <a href="./about-news.html">News</a>
+        </section>
+
+        <!-- Non-collapsible links -->
         <a href="./video.html">Video</a>
         <a href="./publication.html">Publication</a>
         <a href="./link.html">Link</a>
+
       </nav>
     </div>
 
@@ -70,7 +84,10 @@
       <p>image</p>
     </div>
 
+    <!-- Call the script for the mobile navigation icon -->
+    <script src="scripts/navigation icon script.js"></script>
+
     <!-- Call the script for the sidebar collapsibles -->
-    <script src="collapsible script.js"></script>
+    <script src="scripts/collapsible script.js"></script>
 
   </body>
