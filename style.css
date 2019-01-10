@@ -3,10 +3,12 @@
   2. = HOMEPAGE
   3. = SIDEBAR
   4. = GALLERY
-  5. = MOBILE
-  6. = ICON CLOSED
-  7. = ICON OPEN
-  8. = MOBILE GALLERY
+  5. = ABOUT
+  . = MOBILE
+  . = ICON CLOSED
+  . = ICON OPEN
+  . = MOBILE GALLERY
+  . = MOBILE ABOUT
 */
 
 /* COLORS
@@ -37,6 +39,12 @@ footer {
 
 h1 {
 
+}
+
+h2 {
+	font-size: 1.5em;
+	/*font-weight: normal;*/
+	letter-spacing: 1px;
 }
 
 p {
@@ -142,6 +150,17 @@ p {
 	display: inline-block;
 }
 
+/* === ABOUT === */
+
+.text-container {
+	margin: 64px 28px 64px 0px;
+	max-width: 800px;
+}
+
+.text-container p {
+	line-height: 1.4em;
+}
+
 /* === MOBILE ===*/
 
 @media screen and (max-width: 800px) {
@@ -178,6 +197,7 @@ p {
 
 	.responsive {
 		padding: 16px 0 0 0;
+		border-bottom: 2px solid #b3b3b3;
 	}
 
 	.responsive a {
@@ -188,5 +208,11 @@ p {
 
 	.content-container {
 		margin: 0;
+	}
+
+	/* === MOBILE ABOUT === */
+
+	.text-container {
+		margin: 16px 28px;
 	}
 }
