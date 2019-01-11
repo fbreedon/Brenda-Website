@@ -163,8 +163,8 @@ p {
 
 .about-grid-container {
 	display: grid;
-	grid-template-columns: 90px 700px;
-	grid-gap: 4px;
+	grid-template-columns: 70px minmax(220px, 700px);
+	grid-gap: 5px;
 }
 
 .header-item {
@@ -207,6 +207,7 @@ p {
 
 	.sub-sidebar {
 		font-size: 0.8em;
+		padding: 0;
 	}
 
 	/* === ICON OPEN === */
