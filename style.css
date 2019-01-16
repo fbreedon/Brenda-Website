@@ -54,24 +54,33 @@ p {
 /* === HOMEPAGE === */
 
 .homepage-header {
-	position: absolute;
   text-align: center;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
   margin-top: 64px;
+  padding: 0 24px;
+	/*position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+}
+
+.homepage-header .nav-icon {
+	display: none;
+	font-size: 1.9em;
+	color: black;
 }
 
 .homepage-navigation {
-	position: absolute;
   text-align: center;
+  padding-top: 32px;
+	/*position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 }
 
 .homepage-navigation a {
-	font-size: 1.7em;
-	letter-spacing: 3px;
+	font-size: 1.5em;
+	letter-spacing: 2px;
 	text-decoration: none;
 	color: #000000;
 	margin: 0 16px;
@@ -89,6 +98,17 @@ p {
   letter-spacing: 4px;
   text-decoration: none;
   color: #000000;
+}
+
+.slideshow-container {
+  margin: auto;
+	margin-top: 64px;
+	height: 800px;
+	position: relative;
+}
+
+.slide-img {
+	margin: auto;
 }
 
 /* === SIDEBAR === */
@@ -183,14 +203,23 @@ p {
 
 	/* === ICON CLOSED === */
 
+	.homepage-header,
 	.sidebar-container {
+		margin: 0;
 	  padding: 24px 24px;
+	  text-align: left;
 		width: 100%;
 		min-width: 200px;
 		height: auto;
 		position: relative;
 	}
 
+	.homepage-header .title {
+	  font-size: 2em;
+	  letter-spacing: 3px;
+	}
+
+	.homepage-header a.nav-icon,
 	.sidebar-container a.nav-icon {
 		float: right;
 		display: block;
@@ -200,8 +229,12 @@ p {
 		padding: 0;
 	}
 
+	.homepage-navigation a,
 	.sidebar-navigation a {
+		margin: 10px 0 10px 8px;
 		text-align: center;
+		font-size: 1.1em;
+		letter-spacing: 1px;
 		display: none;
 	}
 

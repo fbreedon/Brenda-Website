@@ -8,7 +8,7 @@ for (i = 0; i < collapse.length; i++) {
 	// Listen for one of the collapsible elements to be clicked
   	collapse[i].addEventListener("click", function() {
   		// Set the element to be active or inactive
-    	this.classList.toggle("active");
+    	//this.classList.toggle("active");
     	// Get the element's next sibling, which are the sub-sidebar sections
     	var content = this.nextElementSibling;
     	// If the links are already displayed, hide them
