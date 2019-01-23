@@ -165,13 +165,16 @@ p {
 /* === GALLERY === */
 
 .content-container {
-	margin: 0 0 0 400px;
-	height: 100%;
 	display: inline-block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
 }
 
 .gallery-container {
+	margin: 16px 16px 16px 416px;
 	position: relative;
+	height: 100%;
 }
 
 .gallery-img {
@@ -268,8 +271,8 @@ p {
 
 	/* === MOBILE GALLERY === */
 
-	.content-container {
-		margin: 0;
+	.gallery-container {
+		margin: 16px;
 	}
 
 	/* === MOBILE ABOUT === */
