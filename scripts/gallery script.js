@@ -13,15 +13,30 @@ function currentImg(n) {
 	showImgs(imgIndex = n);
 }
 
-// Take in an integer, create variables for the images, icons, info, and tabs,
-// set the image index, clear all the images and infos, remove the highlight,
-// then set the correct image and info to show
+// Show the responsive image grid when clicking on the center control
+// overlay and hide the image gallery
+function showGrid() {
+	var gallery = document.getElementsByClassName("gallery-container")[0];
+	var grid = document.getElementsByClassName("gallery-grid-container")[0];
+	gallery.style.display = "none";
+	grid.style.display = "block";
+}
+
+// Take in an integer and set variables. Set the image index, clear all the
+// images and infos, then show the correct image and info by the index
 function showImgs(n) {
 	var i;
+	var gallery = document.getElementsByClassName("gallery-container")[0];
+	var grid = document.getElementsByClassName("gallery-grid-container")[0];
 	var x = document.getElementsByClassName("gallery-img");
-	//var icons = document.getElementsByClassName("gallery-icon");
 	var info = document.getElementsByClassName("info");
-	//var tablinks = document.getElementsByClassName("tab-link");
+
+	// Set the gallery container to display if it has been hidden by the grid
+	// and hide the grid
+	if(gallery.style.display === "none") {
+		gallery.style.display = "block";
+		grid.style.display = "none";
+	}
 
 	// Loop back to the first image when clicking next on the last image
 	if (n > x.length) {imgIndex = 1;}
