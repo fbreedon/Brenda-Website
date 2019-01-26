@@ -1,5 +1,13 @@
 var imgIndex = 1;
-showImgs(imgIndex);
+var size = window.matchMedia("(max-width: 800px)");
+// Run the gallery function only if the site isn't in mobile
+switch (size.matches) {
+	case true:
+		break;
+	case false:
+		showImgs(imgIndex);
+		break;
+}
 
 // Take in an integer and increase the image index that many times
 // Used to scroll through the images
