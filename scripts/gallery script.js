@@ -1,12 +1,19 @@
 var imgIndex = 1;
+// Listen for screen size changes and run the script when necessary
 var size = window.matchMedia("(max-width: 800px)");
-// Run the gallery function only if the site isn't in mobile
-switch (size.matches) {
-	case true:
-		break;
-	case false:
-		showImgs(imgIndex);
-		break;
+scriptListener(size);
+size.addListener(scriptListener);
+
+// Display the images depending on screen size
+function scriptListener(size) {
+	switch (size.matches) {
+		case true:
+			mobileImgs();
+			break;
+		case false:
+			showImgs(imgIndex);
+			break;
+	}
 }
 
 // Take in an integer and increase the image index that many times
@@ -70,4 +77,25 @@ function showImgs(n) {
 	// Check that there is info, 
 	// then set the current image's info display value to "block"
 	if(info.length > 0) {info[imgIndex-1].style.display = "block";}
+}
+
+// Undo the showImgs and showGrid functions
+// Used to get rid of the gallery when switching to mobile from desktop
+function mobileImgs() {
+	var i;
+	var gallery = document.getElementsByClassName("gallery-container")[0];
+	var grid = document.getElementsByClassName("gallery-grid-container")[0];
+	var x = document.getElementsByClassName("gallery-img");
+
+	// Set the gallery container to display if it has been hidden by the grid
+	// and hide the grid
+	if(gallery.style.display === "none") {
+		gallery.style.display = "block";
+		grid.style.display = "none";
+	}
+
+	// Set the display value for each image to "block"
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "block";
+	}
 }

@@ -4,6 +4,7 @@
   3. = SIDEBAR
   4. = GALLERY
   5. = ABOUT
+  . = ANIMATIONS
   . = MOBILE
   . = ICON CLOSED
   . = ICON OPEN
@@ -109,6 +110,8 @@ p {
 
 .slide-img {
 	margin: auto;
+	user-select: none;
+	cursor: pointer;
 }
 
 /* === SIDEBAR === */
@@ -236,6 +239,13 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 16px;
+	/*display: inline-grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 12px;
+	justify-content: center;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 16px;*/
 }
 
 .gallery-grid-column {
@@ -247,23 +257,36 @@ p {
 
 .gallery-grid-column img {
 	margin: 6px 0;
-	vertical-align: middle;
+	vertical-align: center;
+	/*place-self: center;*/
 	max-width: 100%;
 	max-height: 100%;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	width: calc(100% + .49px);
 	cursor: pointer;
+	transition: opacity 0.2s;
+	-webkit-transition: 0.2s;
+}
+
+.gallery-grid-column img:hover {
+	opacity: .8;
+	filter: alpha(opacity=80);
 }
 
 @media screen and (max-width: 1350px) {
 	.gallery-grid-column {
 		flex: 50%;
 		max-width: 50%;
+		/*grid-template-columns: auto auto auto;*/
 	}
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1025px) {
 	.gallery-grid-column {
 		flex: 100%;
 		max-width: 100%;
+		/*grid-template-columns: auto auto;*/
 	}
 }
 
@@ -279,6 +302,7 @@ p {
 }
 
 .about-grid-container {
+	display: -ms-grid;
 	display: grid;
 	grid-template-columns: 70px minmax(220px, 700px);
 	grid-gap: 5px;
@@ -293,6 +317,18 @@ p {
 .long-item {
 	grid-column: span 2;
 }
+
+/* === ANIMATIONS === */
+
+/*.fade {
+	animation: fade .5s ease-in-out;
+	-webkit-animation: fade .5s;
+}
+
+@keyframes fade {
+	from {opacity: 1.0}
+	to {opacity: 0}
+}*/
 
 /* === MOBILE ===*/
 
@@ -371,7 +407,11 @@ p {
 	}
 
 	.gallery-img {
-		
+		position: relative;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
 	}
 
 	.gallery-grid-container {
