@@ -81,9 +81,36 @@
 
     <!-- Main content container -->
     <div class="content-container">
-      <div class="gallery-slide">
-        <img src="">
-        <div class="info">test</div>
+      <!-- Image gallery container for setting margins -->
+      <div class="gallery-container">
+        <!-- Image gallery overlay controls -->
+        <div class="overlay-control-left" onclick="plusImg(-1)"></div>
+        <div class="overlay-control-center" onclick="showGrid()"></div>
+        <div class="overlay-control-right" onclick="plusImg(1)"></div>
+        <!-- Image gallery pictures -->
+        <div class="gallery-img">image</div>
+      </div>
+      <!-- Image grid container for setting dimensions and overflow -->
+      <div class="gallery-grid-container">
+        <!-- Image row to set up the flexbox -->
+        <div class="gallery-grid-row">
+          <!-- First image column -->
+          <div class="gallery-grid-column">
+            <div>image</div>
+          </div>
+          <!-- Second image column -->
+          <div class="gallery-grid-column">
+            <div>image</div>
+          </div>
+          <!-- Third image column -->
+          <div class="gallery-grid-column">
+            <div>image</div>
+          </div>
+          <!-- Fourth image column -->
+          <div class="gallery-grid-column">
+            <div>image</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -92,5 +119,8 @@
 
     <!-- Call the script for the sidebar collapsibles -->
     <script src="scripts/collapsible script.js"></script>
+
+    <!-- Call the script for the image gallery -->
+    <script src="scripts/gallery script.js"></script>
 
   </body>
