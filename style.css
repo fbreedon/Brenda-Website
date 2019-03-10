@@ -185,6 +185,7 @@ p {
 
 .gallery-img {
 	display: block;
+	visibility: hidden;
 	vertical-align: middle;
 	position: absolute;
 	margin: auto;
@@ -263,7 +264,7 @@ p {
 	max-height: 100%;
 	transform: translateZ(0);
 	-webkit-transform: translateZ(0);
-	width: calc(100% + .49px);
+	width: calc(100% + .49px); /* Stops jitter during animation */
 	cursor: pointer;
 	transition: opacity 0.2s;
 	-webkit-transition: 0.2s;
@@ -288,6 +289,10 @@ p {
 		max-width: 100%;
 		/*grid-template-columns: auto auto;*/
 	}
+}
+
+.meta-panel {
+	
 }
 
 /* === ABOUT === */
