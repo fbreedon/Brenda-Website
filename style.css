@@ -292,7 +292,34 @@ p {
 }
 
 .meta-panel {
-	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 0 28px 28px;
+	z-index: 4;
+}
+
+.meta-info {
+
+}
+
+.meta-controls,
+.meta-toggle {
+	text-decoration: none;
+	color : #000000;
+}
+
+.meta-controls {
+	padding: 12px 0;
+}
+
+.meta-controls div {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.meta-toggle {
+	cursor: pointer;
 }
 
 /* === ABOUT === */
@@ -429,8 +456,8 @@ p {
 		right: auto;
 	}
 
-	.gallery-grid-container {
-		margin: 0;
+	.meta-panel {
+		display: none;
 	}
 
 	/* === MOBILE ABOUT === */

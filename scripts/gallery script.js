@@ -4,6 +4,7 @@ var gallery = document.getElementsByClassName("gallery-container")[0];
 var grid = document.getElementsByClassName("gallery-grid-container")[0];
 var x = document.getElementsByClassName("gallery-img");
 var info = document.getElementsByClassName("info");
+var meta = document.getElementsByClassName("meta-panel")[0];
 
 // Listen for screen size changes and run the script when necessary
 var size = window.matchMedia("(max-width: 800px)");
@@ -40,6 +41,7 @@ function currentImg(n) {
 // overlay and hide the image gallery
 function showGrid() {
 	gallery.style.display = "none";
+	meta.style.display = "none";
 	grid.style.display = "block";
 }
 
@@ -52,6 +54,7 @@ function showImgs(n) {
 	// and hide the grid
 	if(gallery.style.display === "none") {
 		gallery.style.display = "block";
+		meta.style.display = "block";
 		grid.style.display = "none";
 	}
 
@@ -103,6 +106,7 @@ function mobileImgs() {
 	// and hide the grid
 	if(gallery.style.display === "none") {
 		gallery.style.display = "block";
+		meta.style.display = "none";
 		grid.style.display = "none";
 	}
 
