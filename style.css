@@ -293,24 +293,26 @@ p {
 
 .meta-panel {
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 0 0 28px 28px;
+	bottom: 28px;
+	left: 28px;
 	z-index: 4;
 }
 
 .meta-info {
-
+	line-height: 24px;
+	padding: 0 6px 18px 6px;
 }
 
 .meta-controls,
 .meta-toggle {
 	text-decoration: none;
+	font-size: 1.1em;
 	color : #000000;
+	padding: 0 6px;
 }
 
 .meta-controls {
-	padding: 12px 0;
+	padding: 12px 6px;
 }
 
 .meta-controls div {
