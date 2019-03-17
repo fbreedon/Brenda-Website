@@ -29,6 +29,7 @@ function scriptListener(size) {
 function plusImg(n) {
 	fadeOut();
 	fadeIn(imgIndex += n);
+	showInfo();
 	setTimeout(hideImgs, 200);
 }
 
@@ -77,30 +78,24 @@ function showImgs(n) {
 		x[i].className = x[i].className.replace(" fade-out", "");
 	}
 
+	// Call the showInfo function to display the image's information
+	showInfo();
+
 	// Make the current image visible
 	x[imgIndex-1].style.visibility = "visible";
+}
 
-	/* === OLD CODE THAT DOESN'T WORK WITH ANIMATIONS === */
-	// I might still need this code when I add image infos
-
-	// Set the display value for each image to "none"
-	/*for (i = 0; i < x.length; i++) {
-		x[i].style.display = "none";
-	}*/
-
+// Helper function to display the current image's meta information
+function showInfo () {
 	// Set the display value for each info to "none"
-	// This is a seperate function in case there is no info
-	/*if(info.length > 0) {
+	if(info.length > 0) {
 		for (i = 0; i < info.length; i++) {
 			info[i].style.display = "none";
 		}
-	}*/
-
-	// Set the current image's display value to "block"
-	//x[imgIndex-1].style.display = "block";
-	// Check that there is info, 
-	// then set the current image's info display value to "block"
-	//if(info.length > 0) {info[imgIndex-1].style.display = "block";}
+	}
+	
+	// Check that there is info, then display the current image's info
+	if(info.length > 0) {info[imgIndex-1].style.display = "block";}
 }
 
 // Undo the showImgs and showGrid functions

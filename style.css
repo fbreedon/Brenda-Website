@@ -303,6 +303,10 @@ p {
 	padding: 0 6px 18px 6px;
 }
 
+.info {
+	display: none;
+}
+
 .meta-controls,
 .meta-toggle {
 	text-decoration: none;
@@ -328,11 +332,25 @@ p {
 
 .text-container {
 	margin: 64px 28px 64px 400px;
-	max-width: 800px;
+	max-width: 850px;
 }
 
 .text-container p {
 	line-height: 1.4em;
+}
+
+.text-container img {
+	float: right;
+	margin: 0 0 28px 28px;
+}
+
+@media screen and (max-width: 1000px) {
+	.text-container img {
+		float: initial;
+		padding: 16px 0;
+		margin: auto;
+		display: block;
+	}
 }
 
 .about-grid-container {
@@ -340,6 +358,7 @@ p {
 	display: grid;
 	grid-template-columns: 70px minmax(220px, 700px);
 	grid-gap: 5px;
+	padding-left: 24px;
 }
 
 .header-item {
